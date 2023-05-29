@@ -1,13 +1,25 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
-
+    const { user, userLogOut } = useContext(AuthContext);
+    const handleLogOut = () => {
+        userLogOut()
+            .then(() => { })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
     const options = <>
         <li className="uppercase"><Link to='/'>Home</Link></li>
         <li className="uppercase"><Link to='/menu'>Menu</Link></li>
-        <li className="uppercase"><Link to='/Order'>Order</Link></li>
-        <li className="uppercase"><a>Dashboard</a></li>
-        <li className="uppercase"><a>Our Shop</a></li>
+        <li className="uppercase"><Link to='/Order/salad'>Order</Link></li>
+        <li className="uppercase"><Link to="/secret">Our Shop</Link></li>
+        {
+            user ? <Link to='/register'> <button onClick={handleLogOut} className="btn btn-ghost">Logout</button></Link>
+                : <Link to='/login'><button className="btn btn-ghost">Login</button></Link>
+        }
     </>
     return (
         <div>
