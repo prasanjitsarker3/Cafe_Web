@@ -10,10 +10,10 @@ import banner6 from '../../../assets/home/06.png'
 
 const Banner = () => {
     return (
-        <div className="flex justify-center items-center w-full text-center">
+        <div className="flex justify-center items-center w-full text-center md:h-[700px]">
             <Carousel className="mx-auto text-center">
                 <div className="">
-                    <img src={banner1}/>
+                    <img src={banner1} className=""/>
                 </div>
                 <div>
                     <img src={banner2}/>

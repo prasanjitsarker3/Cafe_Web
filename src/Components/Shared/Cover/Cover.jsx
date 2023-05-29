@@ -2,7 +2,7 @@ import { Parallax } from 'react-parallax';
 
 const Cover = ({ img, title }) => {
     return (
-        <div>
+        <div className="">
             <Parallax
                 blur={{ min: -50, max: 50 }}
                 bgImage={img}
@@ -12,8 +12,8 @@ const Cover = ({ img, title }) => {
                 <div className="hero h-[500px]">
                     <div className="hero-overlay bg-opacity-60"></div>
                     <div className="hero-content text-center text-neutral-content">
-                        <div className="max-w-md">
-                            <h1 className="mb-5 text-5xl font-bold uppercase">{title}</h1>
+                        <div className="max-w-md bg-black opacity-40 p-5 rounded text-white">
+                            <h1 className="mb-5 text-5xl font-bold uppercase text-white">{title}</h1>
                             <p className="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                         </div>
                     </div>

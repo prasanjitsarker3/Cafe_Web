@@ -8,13 +8,13 @@ const MenuCategory = ({ items, title, img }) => {
             {
                 title && <Cover img={img} title={title}></Cover>
             }
-            <div className="grid md:grid-cols-2 gap-6 py-7 px-6 mt-16">
+            <div className="grid md:grid-cols-2 gap-6 py-7 px-6 mt-16 bg-base-200">
                 {
                     items.map(items => <MenuItemsCart items={items} key={items._id}
                     ></MenuItemsCart>)
                 }
             </div>
-            <div className="flex justify-center text-center">
+            <div className="flex justify-center text-center bg-base-200 py-5">
                 <Link to={`/order/${title}`}>
                     <button className="btn btn-outline border-0 border-b-4 uppercase">Order Your favourite Food</button>
                 </Link>

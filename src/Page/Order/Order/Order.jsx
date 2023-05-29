@@ -24,14 +24,14 @@ const Order = () => {
         <div>
             <Cover img={orderImg} title="Order Food"></Cover>
             <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                <TabList className="flex justify-center gap-2 py-5">
+                <TabList className="flex justify-center gap-2 py-5 text-lg font-serif">
                     <Tab>Salad</Tab>
                     <Tab>Dessert</Tab>
                     <Tab>Pizza</Tab>
                     <Tab>Soup</Tab>
                     <Tab>Drinks</Tab>
                 </TabList>
-                <TabPanel>
+                <TabPanel >
                     <OrderTab item={salad}></OrderTab>
                 </TabPanel>
                 <TabPanel>

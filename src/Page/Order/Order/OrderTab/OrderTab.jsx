@@ -12,11 +12,11 @@ const OrderTab = ({ item }) => {
         },
     };
     return (
-        <div>
+        <div className="">
             <Swiper
                 pagination={pagination}
                 modules={[Pagination]}
-                className="mySwiper"
+                className="mySwiper "
             >
                 <SwiperSlide>
                     <div className='grid md:grid-cols-3 gap-10'>
