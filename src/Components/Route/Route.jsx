@@ -19,35 +19,35 @@ const router = createBrowserRouter([
                 path: "/",
                 element: <Home></Home>
             },
-            { 
-                path:"menu",
-                element:<Menu></Menu>
+            {
+                path: "menu",
+                element: <Menu></Menu>
             },
             {
-                path:"order/:category",
-                element:<Order></Order>
+                path: "order/:category",
+                element: <Order></Order>
             },
             {
-                path:"login",
-                element:<Login></Login>
+                path: "login",
+                element: <Login></Login>
             },
             {
-                path:"register",
-                element:<Register></Register>
+                path: "register",
+                element: <Register></Register>
             },
             {
-                path:"secret",
-                element:<PrivateRoute><SecretPage></SecretPage></PrivateRoute>
+                path: "secret",
+                element: <PrivateRoute><SecretPage></SecretPage></PrivateRoute>
             }
         ]
     },
     {
-        path:"dashboard",
-        element:<Dashboard></Dashboard>,
-        children:[
+        path: "dashboard",
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
             {
-                path:"mycart",
-                element:<MyCart></MyCart>
+                path: "mycart",
+                element: <MyCart></MyCart>
 
             }
         ]

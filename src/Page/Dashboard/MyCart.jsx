@@ -69,7 +69,7 @@ const MyCart = () => {
                                 </td>
                                 <td> {item.name}
                                 </td>
-                                <td>{item.price}</td>
+                                <td>$ {item.price}</td>
                                 <td>
                                     <button onClick={() => handleDelete(item)} className="btn btn-circle  bg-[#D1A054]">
                                         <FaTrash className="h-6 w-6 flex items-center justify-center"></FaTrash>
