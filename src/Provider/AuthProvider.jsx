@@ -38,13 +38,12 @@ const AuthProvider = ({ children }) => {
                     .then(data => {
                         console.log(data.data.token);
                         localStorage.setItem("Access-Token", data.data.token)
+                        setLoading(false);
                     })
             }
             else {
                 localStorage.removeItem("Access-Token");
             }
-            
-            setLoading(false)
         })
         return () => {
             return unsubScribe();
